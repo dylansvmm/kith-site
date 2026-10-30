@@ -1,0 +1,32 @@
+name: Support request
+description: Ask a question about Kith or report a problem.
+title: "Support: "
+labels: ["support"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This page is public. Please don't include amounts, account names or other personal details.
+  - type: dropdown
+    id: device
+    attributes:
+      label: Device
+      options:
+        - iPhone
+        - iPad
+        - Mac
+        - Apple Watch
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Kith version
+      description: Settings › About shows it, for example 1.0 (896).
+  - type: textarea
+    id: details
+    attributes:
+      label: What happened, or what would you like to know?
+      description: For a problem, say what you did, what you expected and what you saw instead.
+    validations:
+      required: true
